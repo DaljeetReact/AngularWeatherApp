@@ -1,0 +1,83 @@
+.container{
+   background-color:#4c52ad;    
+   border-radius: 20px;
+   overflow: hidden;
+}
+.upper{
+    text-align:center;
+    height:40vh;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.upper .floating-content{
+    z-index: 1;
+    font-size:24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+}
+.floating-content span {
+    display: inline-block;
+    font-size:3em;
+}
+.floating-content span sup{
+    font-size:0.6em;
+}
+
+.upper img{
+    object-fit:contain;
+}
+.bottom{
+    padding:20px
+}
+.bottom .block {
+    display: flex;
+    justify-content: space-between;
+}
+.bottom .block img {
+    height: 20px;
+    object-fit: contain;
+}
+.bottom .block .left,.bottom .block .right {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    flex:1;
+}
+.block .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.block .left{
+    padding-right: 20px;
+}
+.block .right{
+    padding-left: 20px;
+}
+.block .details {
+    font-size: 16px;
+    font-weight: bolder;
+}
+section.bottom > .block:first-child {
+    margin-bottom: 4em;
+}
+.form-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.form-block input,.form-block input:focus {
+    color: antiquewhite;
+    background: #4c52ad;
+    padding: 10px;
+    border: 1px;
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+}
