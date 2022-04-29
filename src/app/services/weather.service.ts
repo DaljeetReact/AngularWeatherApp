@@ -17,7 +17,7 @@ export class WeatherService {
      return this.http.get<WeatherData>(environment.WeatherApibaseUrl,{
         params: {
           q:cityName,
-          units: 'mertic',
+          units: 'imperial',
           mode: 'json' 
         },
         headers: {

@@ -9,7 +9,7 @@
       <img src="../assets/sunnyjpg.jpg" *ngIf="weatherData.main.temp <= 15">
       <div class="floating-content">
         <p>{{weatherData.name}}</p>
-        <span>{{weatherData.main.temp | number:'1.0-0'}}<sup>°C</sup></span>
+        <span>{{((weatherData.main.temp-32)*5/9) | number:'1.0-0'}}<sup>°C</sup></span>
       </div>
     </section>
     <section class="bottom">
@@ -20,7 +20,7 @@
               <span>min</span>
            </div>
            <div class="details">
-             {{weatherData.main.temp_min | number:'1.0-0'}}°C
+             {{((weatherData.main.temp_min-32)*5/9) | number:'1.0-0'}}°C
            </div>
          </div>
          <div class="right">
@@ -29,7 +29,7 @@
               <span>max</span>
           </div>
           <div class="details">
-            {{weatherData.main.temp_max | number:'1.0-0' }}°C
+            {{((weatherData.main.temp_max-32)*5/9) | number:'1.0-0' }}°C
           </div>
          </div>
        </div>

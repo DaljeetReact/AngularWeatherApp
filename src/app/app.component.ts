@@ -20,12 +20,14 @@ export class AppComponent implements OnInit {
   }
   
   private getWeatherData(CityName:string){
-    this.WeatherService.getWeatherData(CityName).subscribe({
-      next:(response) => {
-        this.weatherData  = response;
-      console.log(response)
-     }
-    });
+    this.WeatherService.getWeatherData(CityName).subscribe(
+     res => {
+        this.weatherData  = res;
+      console.log(res)
+     },
+     err =>alert('City '+err.statusText),
+     
+    );
   }
 
   onSubmit(){
